@@ -1,0 +1,92 @@
+.hero {
+    position: relative;
+    padding: PxToPxToRem(24px) 0 PxToPxToRem(50px);
+    // height: 100vh;
+    height: 100%;
+    min-height: PxToPxToRem(650px);
+    // background: 
+        // url('../img/decor/headphones.png') left 78% center no-repeat;
+        // url('../img/decor/rectangle.png') right bottom no-repeat;
+    background-color: $body-bgV1;
+
+    &::before, &::after {
+        @include tablets {
+            display: none;
+        }
+    }
+ 
+    &::after {
+        content: url('../img/decor/rectangle.png');
+        position: absolute;
+        bottom: -20.5px;
+        right: 13%;
+    }
+}
+
+.hero__title-section {
+    width: 46%;
+
+    @include tablets {
+        flex: 1;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        text-align: center;
+
+        width: 100%;
+
+        &::before {
+            content: '';
+            width: PxToPxToRem(490px);
+            height: PxToPxToRem(490px);
+            background: url('../img/decor/headphones.png') center center / contain no-repeat;
+            margin-bottom: PxToPxToRem(16px);
+
+            @include tablets {
+                width: PxToPxToRem(300px);
+                height: PxToPxToRem(300px);
+            }
+        }
+    }
+}
+
+.hero__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    background: url('../img/decor/headphones.png') right center / 50% auto no-repeat;
+
+    @include tablets {
+        background: none;
+    }
+}
+
+.hero__main-title {
+    font-size: PxToRem(48px);
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: PxToRem(22px);
+}
+
+.hero__title-desc {
+    margin-bottom: PxToRem(36px);
+    padding-right: 10%;
+    font-size: PxToRem(21px);
+
+    @include tablets {
+        padding: 0 25%;
+    }
+    @include phones {
+        padding: 0 11%;
+    }
+}
+
+.hero__icons-section {
+    @include tablets {
+        display: none;
+    }
+}

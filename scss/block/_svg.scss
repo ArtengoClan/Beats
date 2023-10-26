@@ -1,0 +1,27 @@
+// Чтобы менять заливку нужно удалить из svg строчки с fill и тогда в css через class можно задавть fill
+
+.phone-number__icon {
+    margin-right: PxToRem(6px);
+    height: PxToRem(14px);
+    width: PxToRem(14px);
+    vertical-align: top;
+    fill: #000;  
+}
+
+.ear-icon {
+    height: PxToRem(41px);
+    width: PxToRem(41px);
+    fill: #000;
+}
+
+.battery-icon {
+    height: PxToRem(41px);
+    width: PxToRem(41px);
+    fill: #000;
+}
+
+.energy-icon {
+    height: PxToRem(41px);
+    width: PxToRem(41px);
+    fill: #000;
+}

@@ -1,0 +1,17 @@
+.products-section {
+    position: relative;
+    background-color: $body-bgV2;
+
+    &::before {
+        content: url('../img/product/square.svg');
+        position: absolute;
+        bottom: PxToRem(-22px);
+        right: 5%;
+        z-index: 10;
+
+        @include phones {
+            display: none;
+        }
+    }
+}
+

@@ -1,0 +1,12 @@
+.feature {
+    display: flex;
+}
+
+.feature__icon {
+    width: PxToRem(41px);
+    margin-right: PxToRem(11px);
+}
+
+.feature__text {
+    max-width: PxToRem(114px);
+}

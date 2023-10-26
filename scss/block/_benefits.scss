@@ -1,0 +1,43 @@
+.benefits {
+    display: flex;
+
+    @include phones {
+        flex-direction: column;
+        text-align: left;
+    }
+}
+
+.benefits__item {
+    position: relative;
+    flex: 1;
+    padding: 0 3%;
+
+    @include phones {
+        padding: 0;
+        margin-bottom: PxToRem(19px);
+    }
+
+    &::before {
+        content: url('../img/decor/3points.png');
+        position: absolute;
+        top: PxToRem(55px);
+        right: 0;
+        transform: translateX(50%);
+
+        @include phones {
+            display: none;
+        }
+    }
+
+    &:first-child {
+        padding-left: 0;
+    }
+
+    &:last-child {
+        padding-left: 0;
+
+        &::before {
+            display: none;
+        }
+    }
+}

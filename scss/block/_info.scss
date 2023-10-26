@@ -1,0 +1,30 @@
+.info__list {
+    position: absolute;
+    top: 0;
+    left: PxToRem(91px);
+
+    display: none;
+
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: PxToRem(20px) PxToRem(14px);
+    width: PxToRem(273px);
+    height: PxToRem(294px);
+    background-color: rgba(255, 255, 255, 0.8);
+
+}
+
+.info__item {
+    display: flex;
+    align-items: center;
+}
+
+.info__img {
+    margin-right: PxToRem(12px);
+}
+
+.info__text-dop {
+    margin-left: auto;
+}
+

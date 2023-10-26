@@ -1,0 +1,7 @@
+.features {
+    display: flex;
+}
+
+.features__item:not(:last-child) {
+    margin-right: PxToRem(8px);
+}

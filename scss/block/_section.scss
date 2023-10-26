@@ -1,0 +1,36 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    // height: 100vh;
+    height: 100%;
+    min-height: PxToRem(650px);
+
+    &--font-color--white {
+        color: $white;
+        background-color: $black;
+        
+        .section__title {
+            color: inherit;
+        }
+    }
+}
+
+.section__title {
+    margin-bottom: PxToRem(60px);
+    text-align: center;
+    font-size: PxToRem(48px);
+    text-transform: uppercase;
+    font-weight: 700;
+
+    @include phones {
+        font-size: PxToRem(30px);
+    }
+    // @include smallHeight {
+    //     margin-bottom: PxToRem(16px);
+    //     font-size: PxToRem(32px);
+    // }
+}
+
+

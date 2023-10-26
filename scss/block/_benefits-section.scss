@@ -1,0 +1,15 @@
+.benefits-section {
+    position: relative;
+
+    &::before {
+        content: url('../img/decor/triangle.png');
+        position: absolute;
+        bottom: PxToRem(-17px);
+        left: 5%;
+        z-index: 10;
+
+        @include phones {
+            display: none;
+        }
+    }
+}

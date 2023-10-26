@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&family=Open+Sans&family=Play:wght@400;700&display=swap');
+
+// Font
+$font-base: 'Play', sans-serif;
+$font-secondary: 'Alegreya Sans', sans-serif;
+$font-extra: 'Open Sans', sans-serif;
+
+// fontSize
+$fontSize: 16px;
+
+// z-index
+$z-fixed-menu: 100;
+
+// breakpoints
+$tablets: 768px;
+$phones: 480px;
+
+// Html
+html,body {
+    height: 100%;
+}
+
+html {
+    font-size: $fontSize;
+
+    @include tablets {
+        font-size: $fontSize - 1px;
+    }
+
+    @include phones {
+        font-size: $fontSize - 2px;
+    }
+}
+
+body {
+    position: relative;
+    font-family: $font-base;
+    color: $black;
+    font-weight: 400;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    // min-width: calc(rem(940px) + 20px);
+    // min-height: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.maincontent {
+    height: 100%;
+    transition: transform 1s;
+    will-change: transform;
+}
+
+.container {
+    position: relative;
+    margin: 0 auto;
+
+    //  width: 95%;  //
+    //      or      //
+    padding: 0 PxToRem(15px);
+
+    max-width: 970px;
+}
+
+.visually-hidden {
+    position: absolute;
+    display: block;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+.none {
+    display: none;
+}
+

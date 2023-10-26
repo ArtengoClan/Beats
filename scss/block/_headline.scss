@@ -1,0 +1,20 @@
+.headline {
+    margin-bottom: PxToRem(62px);
+    text-align: center;
+}
+
+.headline__title {
+    margin-bottom: PxToRem(18px);
+
+    @include phones {
+        font-size: PxToRem(43px);
+    }
+}
+
+.headline__subtitle {
+    padding: 0 21%;
+
+    @include phones {
+        padding: 0 3%;
+    }
+}

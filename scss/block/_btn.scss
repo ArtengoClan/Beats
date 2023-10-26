@@ -1,0 +1,35 @@
+.btn {
+    display: inline-block;
+
+    padding: PxToRem(18px) PxToRem(41px);
+
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: PxToRem(100px);
+    border: none;
+
+    // @include smallHeight {
+    //     padding: PxToRem(8px) PxToRem(41px);
+    // }
+
+    &--theme--red {
+        background-color: $red !important; 
+        color: $white;
+
+        &:hover {
+            background-color: $white !important;
+            color: $red;
+        }
+    }
+
+    &--theme--transparent {
+        background: transparent;
+        color: $white;
+        text-transform: none;
+
+        &:hover {
+            color: $red;
+        }
+    }
+}
+

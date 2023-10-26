@@ -1,0 +1,19 @@
+.reviews-section {
+    position: relative;
+
+    &::before {
+        content: url('../img/decor/circle.png');
+        position: absolute;
+        left: 5%;
+        bottom: PxToRem(-18px);
+        z-index: 10;
+
+        @include phones {
+            display: none;
+        }
+    }
+    
+    & .section__title {
+        margin-bottom: PxToRem(32px);
+    }
+}

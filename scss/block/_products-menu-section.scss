@@ -1,0 +1,12 @@
+.products-menu-section {
+    background: url('../img/products-menu/bg.png') center center/cover no-repeat;
+    position: relative;
+    color: $white;
+}
+
+.products-menu-section__title {
+    flex: 1;
+    margin-top: 115px;
+    margin-left: 84px;
+    text-align: unset;
+}

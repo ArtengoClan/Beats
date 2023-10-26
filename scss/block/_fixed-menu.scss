@@ -1,0 +1,54 @@
+.fixed-menu {
+    position: fixed;
+    top: 40%;
+    right: 3%;
+    z-index: $z-fixed-menu;
+
+    @include tablets {
+        display: none;
+    }
+}
+
+.fixed-menu__item {
+    margin-bottom: PxToRem(5px);
+
+    &--active {
+        .fixed-menu__link {
+            border-color: $red;
+
+            &::before {
+                background: $red;
+            }
+        }
+    }
+}
+
+.fixed-menu__link {
+    position: relative;
+    display: block;
+    width: PxToRem(16px);
+    height: PxToRem(16px);
+    border: PxToRem(1px) solid transparent;
+    border-radius: 50%;
+
+
+    &::before {
+        content: '';
+        
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        display: block;
+        width: PxToRem(6px);
+        height: PxToRem(6px);
+        background: #292929;
+        border-radius: 50%;
+    }
+}
+
+.fixed-menu--shadow {
+    background: gray;
+    padding: 1px;
+}

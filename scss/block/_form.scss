@@ -1,0 +1,99 @@
+.form {
+    display: flex;
+    color: $black;
+    @include tablets {
+        flex-direction: column;
+        padding: 0 19%;
+    }
+
+    @include phones {
+        padding: 0;
+    }
+}
+
+.form__col {
+    flex: 1;
+    margin-right: PxToRem(26px);
+
+    @include tablets {
+        margin-right: 0;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.form__row {
+    margin-bottom: PxToRem(18px);
+    display: flex;
+}
+
+.form__block {
+    flex: 1;
+    margin-right: PxToRem(20px);
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.form__title {
+    margin-bottom: PxToRem(6px);
+    color: white;
+}
+
+.form__input {
+    padding: PxToRem(18px) PxToRem(11px);
+    width: 100%;
+    background-color: $white;
+    border: PxToRem(3px) solid transparent;
+    border-radius: PxToRem(3px);
+
+    &--textarea {
+        height: PxToRem(180px);
+        resize: none;
+    }
+
+    &:focus {
+        border-color: $red;
+        outline: none;
+    }
+}
+
+.input-error {
+    border-color: hotpink;
+}
+
+.form__controls {
+    display: flex;
+    flex-wrap: wrap;
+    color: $white;
+    &:nth-child(2) {
+        margin-bottom: PxToRem(16px);
+    }
+
+    // Предпоследний элемент
+    &:nth-last-child(2) {
+        margin-bottom: PxToRem(44px);
+
+        // @include smallHeight {
+        //     margin-bottom: PxToRem(8px);
+        // }
+    }
+
+    & > label {
+        margin-right: PxToRem(24px);
+    }
+
+    @include phones {
+        justify-content: center;
+    }
+}
+
+.form__btns {
+    @include tablets {
+        display: flex;
+        justify-content: center;
+    }
+}

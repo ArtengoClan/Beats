@@ -1,0 +1,22 @@
+@function PxToRem($px) {
+    @return calc($px / $fontSize) * 1rem; 
+    // @return calc($px / $fontSize) + 0rem; 
+}
+
+@mixin tablets {
+    @media screen and (max-width: $tablets) {
+        @content;
+    }
+}
+
+@mixin phones {
+    @media screen and (max-width: $phones) {
+        @content;
+    }
+}
+
+@mixin smallHeight {
+    @media screen and (max-height: 790px) {
+        @content;
+    }
+}
